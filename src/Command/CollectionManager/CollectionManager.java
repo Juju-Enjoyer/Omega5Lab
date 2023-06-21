@@ -34,18 +34,18 @@ public class CollectionManager {
         return flats;
     }
 
-    public void getWorkerFile() throws FileNotFoundException,NoSuchElementException {
-        System.out.println("Задайте рабочий файл");
+    public void getWorkerFile(String arg) throws FileNotFoundException,NoSuchElementException,NoSuchElementException  {
+
         Scanner scFile = new Scanner(System.in);
-        String line = scFile.nextLine();
-        while (line.isEmpty()){
-            System.out.println("Пожалуйста не пустой");
+        String line = arg;
+        while (line.trim().isEmpty()){
+            System.out.println("Задайте рабочий файл так в строчку был задан не очень хоороший файл");
             line = scFile.nextLine();
         }
         File file = new File(line);
         if (file.exists()) {
             while ((!file.canRead()) & (!file.canWrite())) {
-                System.out.println("что то не так или не читабельно либо не записываемо");
+                System.out.println("мб выбирите другой файл?");
                 file = new File(scFile.nextLine());
             }
             this.workFile = file;
@@ -131,12 +131,16 @@ public class CollectionManager {
     }
 
 
-    public void insert(long key) throws IllegalValueException {
+    public void insert(long key) throws IllegalValueException, NoSuchElementException{
         Filler pr = new Filler();
         Flat flat = pr.parser(getMaxId() + 1);
-        flats.put(key, flat);
+        try {
+            flats.put(key, flat);
+        }catch (NullPointerException e){
+            System.err.println("Zalupa");
+        }
     }
-    public void insert(long key, BufferedReader reader) throws IOException {
+    public void insert(long key, BufferedReader reader) throws IOException,NoSuchElementException {
         flats.put(key,scriptFill(reader,getMaxId()+1));
     }
 
@@ -315,7 +319,7 @@ public class CollectionManager {
     }
 
 
-    public boolean update(long idWh) throws IllegalValueException {
+    public boolean update(long idWh) throws IllegalValueException,NoSuchElementException{
         Iterator<Map.Entry<Long, Flat>> iterator = flats.entrySet().iterator();
         Filler pr = new Filler();
         try {
@@ -334,7 +338,7 @@ public class CollectionManager {
         return true;
     }
 
-    public boolean update(Long idwh, BufferedReader reader) throws IOException, NumberFormatException {
+    public boolean update(Long idwh, BufferedReader reader) throws IOException, NumberFormatException,NoSuchElementException {
         long id = idwh;
         Iterator<Map.Entry<Long, Flat>> iterator = flats.entrySet().iterator();
         try {

@@ -4,10 +4,7 @@ import Exceptions.IllegalValueException;
 import PossibleClassInCollection.Flat.*;
 
 import java.time.ZonedDateTime;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class Filler {
     /*private Hashtable<Integer, Flat> flats;
@@ -16,21 +13,25 @@ public class Filler {
         this.flats = flats;
     }*/
 
-    public Flat parser(long idQWE) throws IllegalValueException {
-        long id = idQWE;
-        String name = getInputName();
-        Coordinates coo = new Coordinates(getInputX(), getInputY());
-        ZonedDateTime date = ZonedDateTime.now();
-        long area = getArea();
-        int rooms = getNumberOfRooms();
-        Furnish furnish = Furnish.parse();
-        View view = View.parse();
-        Transport transport = Transport.parse();
-        House hou = new House(getInputName(), getInputYear(), getInputNumberOfFloors(), getInputNumberOfFlatsOnFloor(), getInputNumberOfLifts());
-        return new Flat(id, name, coo, date, area, rooms, furnish, view, transport, hou);
+    public Flat parser(long idQWE) throws IllegalValueException, NoSuchElementException  {
+
+
+    long id = idQWE;
+    String name = getInputName();
+    Coordinates coo = new Coordinates(getInputX(), getInputY());
+    ZonedDateTime date = ZonedDateTime.now();
+    long area = getArea();
+    int rooms = getNumberOfRooms();
+    Furnish furnish = Furnish.parse();
+    View view = View.parse();
+    Transport transport = Transport.parse();
+    House hou = new House(getInputName(), getInputYear(), getInputNumberOfFloors(), getInputNumberOfFlatsOnFloor(), getInputNumberOfLifts());
+
+    return new Flat(id, name, coo, date, area, rooms, furnish, view, transport, hou);
+
     }
 
-    public long getLong() {
+    public long getLong() throws NoSuchElementException{
         Scanner scLong = new Scanner(System.in);
         boolean flag = false;
         long example = 0L;
@@ -55,12 +56,14 @@ public class Filler {
                 System.out.println("long vedi");
             }catch (ArithmeticException e){
                 System.out.println("Число не входит в диапазон типа");
-            }
+
+        }
+
 
         }
         return example;
     }
-    public int getInt() {
+    public int getInt() throws NoSuchElementException{
         Scanner scLong = new Scanner(System.in);
         boolean flag = false;
         int example = 0;
@@ -85,7 +88,9 @@ public class Filler {
                 System.out.println("число надо");
             }catch (ArithmeticException e){
                 System.out.println("Число не входит в диапазон типа");
-            }
+
+
+        }
 
         }
         return example;
@@ -93,13 +98,13 @@ public class Filler {
 
 
 
-    public String getInputName() throws IllegalValueException {
-        System.out.println("name:String");
+    public String getInputName() throws IllegalValueException,NoSuchElementException {
+       System.out.println("name:String");
         Scanner scName = new Scanner(System.in);
         String name;
-        do {
-            name = scName.nextLine();
-            try {
+        do {name="";
+
+            try { name = scName.nextLine();
                 if (name.isEmpty()) {
                     throw new IllegalValueException("не пустой");
                 }
@@ -107,12 +112,15 @@ public class Filler {
                 System.out.println(e.getMessage());
             }
 
-        }
+            }
+
+
         while (name.isEmpty());
         return name;
-    }
+       }
 
-    public long getInputX() {
+
+    public long getInputX() throws NoSuchElementException{
         System.out.println("coordinates x:long");
         Scanner scX = new Scanner(System.in);
         boolean flag = false;
@@ -138,7 +146,7 @@ public class Filler {
         return x;
     }
 
-    public Integer getInputY() {
+    public Integer getInputY() throws NoSuchElementException{
         System.out.println("coordinates y:int > -470");
         Scanner scY = new Scanner(System.in);
         boolean flag = false;
@@ -166,12 +174,13 @@ public class Filler {
                 System.out.println("Число не входит в диапазон типа");
             }
 
+
         }
         return y;
     }
 
 
-    public int getInputYear() {
+    public int getInputYear() throws NoSuchElementException{
         System.out.println("year:int >0, <431");
         Scanner scYear = new Scanner(System.in);
         boolean flag = false;
@@ -199,6 +208,7 @@ public class Filler {
             catch (ArithmeticException e){
                 System.out.println("Число не входит в диапазон типа");
             }
+
         }
         return example;
     }
@@ -221,7 +231,7 @@ public class Filler {
         System.out.println("Area:long");
         return getLong();
     }
-    public int getNumberOfRooms(){
+    public int getNumberOfRooms() throws NoSuchElementException{
         System.out.println("NumberOfRooms:int");
         Scanner scLong = new Scanner(System.in);
         boolean flag = false;

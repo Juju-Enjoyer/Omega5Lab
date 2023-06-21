@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Lab5:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="69fb24c5-eddb-4671-b68e-ec8d9a6e1262" name="Changes" comment="" />
+    <list default="true" id="69fb24c5-eddb-4671-b68e-ec8d9a6e1262" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Lab5_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Omega5Lab.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Omega5Lab.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CollectionManager/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CollectionManager/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CommandList/Insert/Insert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommandList/Insert/Insert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/CommandProcessor/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/CommandProcessor/CommandProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/Parse/Filler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/Parse/Filler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Command/Parse/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Command/Parse/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,10 +48,39 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/nic/IdeaProjects/Omega5Lab",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/out/artifacts/Lab5_jar" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Omega5Lab" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -33,7 +90,32 @@
       <option name="presentableId" value="Default" />
       <updated>1684310258374</updated>
       <workItem from="1684310259473" duration="1000" />
+      <workItem from="1684310620565" duration="7210000" />
+      <workItem from="1684761005849" duration="1833000" />
+      <workItem from="1684936573304" duration="178000" />
+      <workItem from="1684948417493" duration="20000" />
+      <workItem from="1685035170784" duration="357000" />
+      <workItem from="1685089469951" duration="2485000" />
+      <workItem from="1685104401747" duration="7200000" />
+      <workItem from="1685275387551" duration="222000" />
+      <workItem from="1685280228036" duration="31000" />
+      <workItem from="1685705741788" duration="991000" />
+      <workItem from="1686567955398" duration="487000" />
+      <workItem from="1686570947251" duration="599000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

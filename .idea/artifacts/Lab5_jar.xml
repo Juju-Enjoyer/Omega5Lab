@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Lab5:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Lab5_jar</output-path>
+    <root id="archive" name="Omega5Lab.jar">
+      <element id="module-output" name="Omega5Lab" />
+      <element id="extracted-dir" path="$USER_HOME$/Загрузки/gson-2.8.6.jar" path-in-jar="/" />
+      <element id="library" level="project" name="gson-2.8.6" />
+    </root>
+  </artifact>
+</component>

@@ -76,15 +76,17 @@ public class CommandProcessor {
     }
 
 
-    public void execute() throws InvalidInputException, IllegalValueException, NoSuchCommandException, IOException, InterruptedException {
+    public void execute(String arg) throws InvalidInputException, IllegalValueException, NoSuchCommandException, IOException, InterruptedException {
         boolean result = true;
         try {
             System.out.println("Hi");
-            cm.getWorkerFile();
+            cm.getWorkerFile(arg);
             cm.checkWorkFile();
         }catch (NoSuchElementException e) {
             SoundPlayer.playSound("Pud_ability_hook_miss_01_ru.wav",2500);
+            System.out.println("Они убили Кени");
             result = false;}
+
         Scanner scan = new Scanner(System.in);
         while (result){String commandWithOutArgs ="";
             String args="";
@@ -95,8 +97,8 @@ public class CommandProcessor {
                 if (commandLine.length > 1) {
                     args = commandLine[1];
                 }}catch (NoSuchElementException e) {
-                SoundPlayer.playSound("coins.wav",1000);
-
+                SoundPlayer.playSound("Pud_ability_hook_miss_01_ru.wav",2500);
+                System.out.println("Они убили Кени");
                 result = false;
 
             }
@@ -110,6 +112,14 @@ public class CommandProcessor {
             }catch (NumberFormatException e){
                 System.out.println("String там где не надо");
             }
+            catch(ArrayIndexOutOfBoundsException e) {
+                System.out.println("Слишком много пробелов попробуйте");
+            }catch (NoSuchElementException e) {
+            SoundPlayer.playSound("coins.wav",1000);
+            System.out.println("Они убили Кени");
+            result = false;
+
+        }
 
         }
 

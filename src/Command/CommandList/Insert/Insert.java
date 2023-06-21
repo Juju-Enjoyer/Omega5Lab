@@ -6,7 +6,9 @@ import Exceptions.IllegalKeyException;
 import Exceptions.IllegalValueException;
 import Exceptions.NoSuchCommandException;
 
-public class Insert implements Command {
+import java.util.NoSuchElementException;
+
+public class Insert implements Command  {
     private CollectionManager cm;
     public Insert(CollectionManager cm){
         this.cm=cm;
@@ -22,7 +24,7 @@ public class Insert implements Command {
     }
 
     @Override
-    public boolean execute(String args) throws NoSuchCommandException, NumberFormatException, IllegalKeyException, IllegalValueException {
+    public boolean execute(String args) throws NoSuchElementException, NumberFormatException, IllegalKeyException, IllegalValueException,NoSuchCommandException {
         if (args.isEmpty()){
             throw new NoSuchCommandException();
         }

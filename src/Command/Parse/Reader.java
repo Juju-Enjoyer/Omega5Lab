@@ -3,9 +3,7 @@ package Command.Parse;
 import Command.CommandProcessor.Command;
 import Exceptions.NoSuchCommandException;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -21,7 +19,7 @@ public class Reader {
     Scanner sc = new Scanner(System.in);
 
     public String[] separator (String...agrs) throws NoSuchCommandException {
-        String inputs = sc.nextLine();
+        String inputs = sc.nextLine().trim();
         String[] tokens = inputs.split(" ");
         String command = tokens[0];
         for(String coom: commands.keySet()){
